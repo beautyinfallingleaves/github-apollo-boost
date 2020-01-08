@@ -16,8 +16,8 @@ const client = new ApolloClient({
   }
 })
 
-// client
-//   .query({
-//     query: GET_ORGANIZATION,
-//   })
-//   .then(console.log)
+client
+  .query({
+    query: GET_ORGANIZATION,
+  })
+  .then(console.log)
