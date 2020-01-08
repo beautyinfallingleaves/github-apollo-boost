@@ -1,6 +1,9 @@
 import 'dotenv/config'
 import 'cross-fetch/polyfill'
 import ApolloClient from 'apollo-boost'
+import {
+  GET_ORGANIZATION,
+} from './script'
 
 const client = new ApolloClient({
   uri: 'https://api.github.com/graphql',
@@ -13,14 +16,8 @@ const client = new ApolloClient({
   }
 })
 
-const userCredentials = { firstname: 'Robin' }
-const userDetails = { nationality: 'German' }
-
-const user = {
-  ...userCredentials,
-  ...userDetails,
-}
-
-console.log(user)
-
-console.log(process.env.SOME_ENV_VARIABLE)
+// client
+//   .query({
+//     query: GET_ORGANIZATION,
+//   })
+//   .then(console.log)
