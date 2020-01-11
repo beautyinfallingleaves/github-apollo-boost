@@ -2,7 +2,7 @@ import 'dotenv/config';
 import 'cross-fetch/polyfill';
 import ApolloClient from 'apollo-boost';
 import {
-  GET_ORGANIZATION,
+  GET_REPOSITORIES_OF_ORGANIZATION,
 } from './script';
 
 const client = new ApolloClient({
@@ -18,6 +18,9 @@ const client = new ApolloClient({
 
 client
   .query({
-    query: GET_ORGANIZATION,
+    query: GET_REPOSITORIES_OF_ORGANIZATION,
+    variables: {
+      organization: 'the-road-to-learn-react'
+    }
   })
   .then(console.log);
