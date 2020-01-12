@@ -1,9 +1,9 @@
 import 'dotenv/config'
-import 'cross-fetch/polyfill';
-import ApolloClient from 'apollo-boost';
+import 'cross-fetch/polyfill'
+import ApolloClient from 'apollo-boost'
 import {
   GET_REPOSITORIES_OF_ORGANIZATION,
-} from './script';
+} from './script'
 
 const client = new ApolloClient({
   uri: 'https://api.github.com/graphql',
