@@ -1,4 +1,4 @@
-import 'dotenv/config';
+import 'dotenv/config'
 import 'cross-fetch/polyfill';
 import ApolloClient from 'apollo-boost';
 import {
